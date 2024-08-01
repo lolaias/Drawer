@@ -19,7 +19,7 @@ export function Slide1({ setPageI }: IPagina) {
                 <ButtonSlide style={styles.butt} onPressI={() => setPageI(1)} />
                 <ButtonSlide style={styles.butt} onPressI={() => setPageI(2)} />
                 <ButtonSlide style={styles.butt} onPressI={() => setPageI(3)} />
-                <ButtonSlide style={styles.butt} onPressI={() => setPageI(4)} />
+                
             </View>
         </ImageBackground>
     )

@@ -1,31 +1,25 @@
-import { ImageBackground, Image, View, StyleSheet, Text } from "react-native";
+import { ImageBackground, Image, View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { styleContainer, colors } from "../../styles/GlobalStyle"
 import { styles } from "./style"
 import { IPagina } from "../../../App";
 import { ButtonSlide } from "../../Components/ButtonSlide"
+import { MenuStackTypes } from "../../Navigation/MenuStack.navigation";
 
-
-export function Slide3({ setPageI }: IPagina) {
+export function Slide3({ navigation }: MenuStackTypes) {
     const slide = require('../../assets/fundo1.png')
     const privs = require('../../assets/privs.png')
-    return (
+    return(
         <ImageBackground source={slide} style={styleContainer.container} >
             <View style={styles.container}>
-            <Image source={privs} style={styles.imagem}></Image>
-            <Text style={styles.titulo}> ˗ˏˋPrivacidadeˎˊ˗ </Text>
-                <Text style={styles.textPrincipal}>Esse aplicativo visa promover privacidade aos usuários cadastrados.  </Text>
-               </View> 
-            <View style={styles.containerButton}>
-                <ButtonSlide style={styles.butt} onPressI={() => setPageI(1)} />
-                <ButtonSlide style={styles.butt} onPressI={() => setPageI(2)} />
-                <ButtonSlide style={styles.butt} onPressI={() => setPageI(3)} />
-                <ButtonSlide style={styles.butt} onPressI={() => setPageI(4)} />
+                <Image source={privs} style={styles.imagem}></Image>
+                <Text style={styles.titulo}> ˗ˏˋLoginˎˊ˗ </Text>
+                <TouchableOpacity style={styles.botao}
+                onPress={() => navigation.push("Slide3")}
+               >
+            </TouchableOpacity >
+        </View>
+             </ImageBackground >
 
-
-
-
-            </View>
-        </ImageBackground>
 
     )
 }

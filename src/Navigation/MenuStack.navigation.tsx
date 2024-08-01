@@ -1,9 +1,10 @@
-import {StackNavigationProp, createStackNavigator} from '@react-navigation/stack'
-import {ScreenSlide4, ScreenSlide3} from '../screens';
+import {StackNavigationProp, createStackNavigator} from '@react-navigation/stack';
+import {Slide2, Slide3} from '../screens';
 
 type MenuStackParam = {
+    Slide1:undefined
+    Slide2: undefined
     Slide3: undefined
-    Slide4: undefined
 }
 
 type MenuScreenNavigation = StackNavigationProp < MenuStackParam, "Slide3">
@@ -16,10 +17,11 @@ export function MenuStack() {
     return(
         <Stack.Navigator screenOptions={{
             animationEnabled: true,
-            gestureEnabled: true
+            gestureEnabled: true,
+            headerShown:false,
         }} >
-         <Stack.Screen name="Slide3" component={ScreenSlide3}/>
-         <Stack.Screen name="Slide4" component={ScreenSlide4}/>
+         <Stack.Screen name="Slide2" component={Slide2}/>
+         <Stack.Screen name="Slide3" component={Slide3}/>
         </Stack.Navigator>
     );
 }

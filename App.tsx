@@ -8,6 +8,8 @@ import { useFonts, Trykker_400Regular } from '@expo-google-fonts/trykker';
 import {Hind_400Regular,} from '@expo-google-fonts/hind';
 import {Fresca_400Regular } from '@expo-google-fonts/fresca';
 import {ComicNeue_400Regular} from '@expo-google-fonts/comic-neue';
+import 'react-native-gesture-handler';
+import { Navigation } from './src/Navigation';
 
 
 export interface IPagina{
@@ -26,21 +28,11 @@ export default function App () {
   
   });
   
-  if (!fontsLoaded) {
-    return null;
+  return(
+    <Navigation/>
+  );
   }
-  if(page == 1){
-     return <Slide1 setPageI = {setPage}/>
-  }else if(page == 2){
-    return <Slide2 setPageI = {setPage}/>
-  }else if(page == 3){
-    return <Slide3 setPageI = {setPage}/>
-  }else if (page == 4){
-    return <Slide4 setPageI = {setPage}/>
-  }
-    
-    
 
   
   
-}
+
