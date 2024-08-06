@@ -1,12 +1,14 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { MenuStack } from './MenuStack.navigation';
-import { MenuTabs } from "./MenuBottomTab.navigarion"
+import { MenuTabs } from "./MenuBottomTab.navigarion";
+import { MenuDrawer } from "./MenuDrawer.navigation";
+import {LoginNavigation} from "./login.navigation";
 
 export function Navigation() {
     return (
         <NavigationContainer>
             <MenuTabs/>
+            <LoginNavigation/>
         </NavigationContainer>
     );
 }

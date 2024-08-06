@@ -13,10 +13,6 @@ export function Slide3({ navigation }: MenuStackTypes) {
             <View style={styles.container}>
                 <Image source={privs} style={styles.imagem}></Image>
                 <Text style={styles.titulo}> ˗ˏˋLoginˎˊ˗ </Text>
-                <TouchableOpacity style={styles.botao}
-                onPress={() => navigation.push("Slide3")}
-               >
-            </TouchableOpacity >
         </View>
              </ImageBackground >
 

@@ -15,12 +15,6 @@ export function Slide1({ setPageI }: IPagina) {
                 <Text style={styles.textPrincipal2}>Dream！</Text>
                 <Text style={styles.text}>Sua Biblioteca Pessoal</Text>
             </View>
-            <View style={styles.containerButton}>
-                <ButtonSlide style={styles.butt} onPressI={() => setPageI(1)} />
-                <ButtonSlide style={styles.butt} onPressI={() => setPageI(2)} />
-                <ButtonSlide style={styles.butt} onPressI={() => setPageI(3)} />
-                
-            </View>
         </ImageBackground>
     )
 }
