@@ -3,7 +3,6 @@ import { styleContainer, colors } from "../../styles/GlobalStyle"
 import { styles } from "./style"
 import { IPagina } from "../../../App";
 import { ButtonSlide } from "../../Components/ButtonSlide"
-import { MenuStackTypes } from "../../Navigation/MenuStack.navigation";
 
 export function Slide3({ navigation }: MenuStackTypes) {
     const slide = require('../../assets/fundo1.png')
