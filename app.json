@@ -24,7 +24,22 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-font"
+    [
+      "expo-camera",
+      {
+        "cameraPermisson": "Permite $(PRODUCT_NAME) acessar a sua camera",
+        "microphonePermission": "Permita $(PRODUCT_NAME) acessar seu microfone",
+        "recordAudioAndroid": true 
+      }
+    ],
+    [
+      "expo-media-library",
+      {
+        "photosPermission": "Permita $(PRODUCT_NAME) acessar suas fotos.",
+        "savePhotosPermission": "Permita $(PRODUCT_NAME) salvar suas fotos.",
+        "isAccessMediaLocationEnabled":true
+      }
+    ] 
     ]
   }
 }
