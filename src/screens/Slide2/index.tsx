@@ -4,7 +4,7 @@ import { styles } from "./style"
 import { IPagina } from "../../../App";
 import { ButtonSlide } from "../../Components/ButtonSlide"
 import AntDesign from '@expo/vector-icons/AntDesign';
-import { MenuTabTypes } from "../../Navigation/MenuBottomTab.navigarion";
+import { MenuTabTypes } from "../../Navigation/MenuBottomTab.navigation";
 
 export function Slide2({ navigation }: MenuTabTypes) {
     const slide = require('../../assets/fundo1.png')

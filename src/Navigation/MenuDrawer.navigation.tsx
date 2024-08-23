@@ -1,14 +1,15 @@
 import {DrawerNavigationProp, createDrawerNavigator} from '@react-navigation/drawer';
-import { MenuTabs } from './MenuBottomTab.navigarion';
+import { MenuTabs } from './MenuBottomTab.navigation';
 import { colors } from '../styles/GlobalStyle'
 import { FontAwesome5, FontAwesome, Entypo, Ionicons } from '@expo/vector-icons';
 import { ScreenCamera } from '../screens';
 
 
 type MenuDrawerParam = {
-    Slide1: undefined
+    Perfil: undefined
+    Camera: undefined
 }
-type MenuScreenNavigation = DrawerNavigationProp<MenuDrawerParam, "Slide1">
+type MenuScreenNavigation = DrawerNavigationProp<MenuDrawerParam, "Perfil">
 export type MenuDrawerTypes = {
     navigation: MenuScreenNavigation
 }
@@ -25,9 +26,9 @@ export function MenuDrawer() {
             drawerActiveTintColor: colors.black,
             drawerInactiveTintColor: colors.black
         }}>
-           <Drawer.Screen name='Slide1' component={MenuTabs}
+           <Drawer.Screen name='Perfil' component={MenuTabs}
                 options={{
-                    drawerLabel: 'Pagina Inicial',
+                    drawerLabel: 'Perfil',
                     headerTitle: '',
                     drawerIcon: () => (
                         <FontAwesome name="home" size={24} color={colors.white} />

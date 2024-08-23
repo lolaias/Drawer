@@ -1,4 +1,4 @@
-import { Login, Cadastrar } from '../screens'
+import { Login, Register} from '../screens'
 import { createStackNavigator, StackNavigationProp } from '@react-navigation/stack';
 import { colors } from '../styles/GlobalStyle';
 import { registerCallableModule } from 'react-native';
@@ -25,7 +25,7 @@ export function LoginNavigation() {
 
            <Stack.Screen options={{
             headerTitle: "Registrar" 
-           }} name="Register" component={Cadastrar}/>
+           }} name="Register" component={Register}/>
         </Stack.Navigator>
     )
 }
