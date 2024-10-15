@@ -1,13 +1,14 @@
 import {DrawerNavigationProp, createDrawerNavigator} from '@react-navigation/drawer';
 import { MenuTabs } from './MenuBottomTab.navigation';
 import { colors } from '../styles/GlobalStyle'
-import { FontAwesome5, FontAwesome, Entypo, Ionicons } from '@expo/vector-icons';
+import { FontAwesome5, FontAwesome, Entypo, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { ScreenCamera } from '../screens';
 
 
 type MenuDrawerParam = {
     Perfil: undefined
     Camera: undefined
+    QrCode: undefined
 }
 type MenuScreenNavigation = DrawerNavigationProp<MenuDrawerParam, "Perfil">
 export type MenuDrawerTypes = {
@@ -39,6 +40,13 @@ export function MenuDrawer() {
                 options={{
                     drawerIcon: () => (
                         <Ionicons name="camera" size={24} color={colors.white} />
+                    ),
+                }}
+            />
+            <Drawer.Screen name='QrCode' component={ScreenQrCode}
+                options={{
+                    drawerIcon: () => (
+                        <MaterialCommunityIcons name="qrcode-scan" sixe={24} color={colors.white} />
                     ),
                 }}
             />
