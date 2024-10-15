@@ -9,7 +9,7 @@ export interface IAuthContextData {
     signIn (credentials: IUser): Promise<void>
     singOut(): Promise<void>
     user?: IAuthenticated
-    loading: boolean
+    loading?: boolean
     setLoading: Dispatch<SetStateAction<boolean>>
 }
 
