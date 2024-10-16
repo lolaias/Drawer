@@ -9,7 +9,7 @@ import { AxiosError } from "axios";
 import { apiMessage } from "../../services/data";
 import { styles } from "./styles";
 
-export function CadMessagem({ navigation }: MessageTypes) {
+export function CadMensagem({ navigation }: MessageTypes) {
     const [data, setData] = useState<IMessage>()
     const { setLoading } = useAuth()
     function handleChange(item: IMessage) {
